@@ -9,9 +9,22 @@ dependencies = [
     "tree-sitter-verilog>=1.0.3",
     "vcdvcd>=2.6.0",
 ]
+license = { text = "MPL-2.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+authors = [
+    { name = "MrAMS", email = "2421653893@qq.com" }
+]
 
 [project.scripts]
 wave2tb = "wave2tb_generator.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/MrAMS/wave2tb-generator"
+"Bug Tracker" = "https://github.com/MrAMS/wave2tb-generator/issues"
 
 [build-system]
 requires = ["setuptools>=68"]
