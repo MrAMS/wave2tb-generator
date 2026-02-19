@@ -1,6 +1,6 @@
 # wave2tb-generator
 
-[![CI](https://github.com/MrAMS/wave2tb-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/MrAMS/wave2tb-generator/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/wave2tb-generator)](https://pypi.org/project/wave2tb-generator/) [![CI](https://github.com/MrAMS/wave2tb-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/MrAMS/wave2tb-generator/actions/workflows/ci.yml)
 
 Generate a cycle-based SystemVerilog testbench from a captured VCD waveform and DUT RTL.
 
