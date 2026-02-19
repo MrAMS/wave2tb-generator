@@ -1,5 +1,7 @@
 # wave2tb-generator
 
+[![CI](https://github.com/MrAMS/wave2tb-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/MrAMS/wave2tb-generator/actions/workflows/ci.yml)
+
 Generate a cycle-based SystemVerilog testbench from a captured VCD waveform and DUT RTL.
 
 ## Why This Project Matters
