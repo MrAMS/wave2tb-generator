@@ -23,29 +23,28 @@ Generate a cycle-based SystemVerilog testbench from a captured VCD waveform and 
 
 ## Install
 
+For end users (PyPI release):
+
+```bash
+pip install wave2tb-generator
+wave2tb --help
+```
+
+For development and testing (`uv` workflow):
+
 ```bash
 uv sync
-```
-
-After `uv sync`, run CLI commands with `uv run` (recommended), for example:
-
-```bash
 uv run wave2tb --help
-```
-
-If you prefer not to use `uv run` each time, activate the venv first:
-
-```bash
-source .venv/bin/activate
-wave2tb --help
 ```
 
 ## CLI
 
+The examples below target end users (`pip` install). For development and testing (`uv` workflow), prepend `uv run` to each command.
+
 Generate testbench in one step from VCD + RTL:
 
 ```bash
-uv run wave2tb vcd-to-tb \
+wave2tb vcd-to-tb \
   --vcd test/out/reference.vcd \
   --rtl test/data/sample_dut.sv \
   --top-module sample_dut \
@@ -57,7 +56,7 @@ uv run wave2tb vcd-to-tb \
 Generate IR and testbench (legacy two-output command):
 
 ```bash
-uv run wave2tb from-vcd \
+wave2tb from-vcd \
   --vcd test/out/reference.vcd \
   --rtl test/data/sample_dut.sv \
   --top-module sample_dut \
@@ -69,7 +68,7 @@ uv run wave2tb from-vcd \
 Generate testbench from an existing IR:
 
 ```bash
-uv run wave2tb ir-to-tb \
+wave2tb ir-to-tb \
   --ir test/out/generated.ir.json \
   --tb-out test/out/generated_tb.sv
 ```
@@ -77,7 +76,7 @@ uv run wave2tb ir-to-tb \
 Optional external equivalence verification:
 
 ```bash
-uv run wave2tb vcd-to-tb \
+wave2tb vcd-to-tb \
   --vcd test/out/reference.vcd \
   --rtl test/data/sample_dut.sv \
   --top-module sample_dut \
