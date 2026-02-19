@@ -2,6 +2,13 @@
 
 Generate a cycle-based SystemVerilog testbench from a captured VCD waveform and DUT RTL.
 
+## Why This Project Matters
+
+- Small design team using [Chisel](https://www.chisel-lang.org/) can keep their verification written in [svsim](https://github.com/chipsalliance/chisel/tree/main/svsim).
+- Outsourced backend/PD teams usually need plain, static SV testbenches for GLS handoff.
+- This tool bridges both worlds by converting captured VCD behavior into deterministic, standalone SV TB code (no Chisel runtime dependency).
+- It reduces manual TB rewrite effort and lowers handoff risk between frontend and backend flows.
+
 ## Workflow
 
 1. Parse DUT ports from RTL in Python (`tree-sitter-verilog`).
